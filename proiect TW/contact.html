@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Contact</title><head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/java.js"></script>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+
+
+
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <!-- Avatar image in top left corner -->
+        <div class="dropdown">
+            <img src="/img/cake.jpg" style="width:100%" class="dropdown">
+            <div class="dropdown-content">
+
+
+
+                <a href="/" class="w3-bar-item w3-button w3-padding-large w3-black">
+                    <i class="fa fa-home w3-xxlarge"></i>
+                    <p>HOME</p>
+                </a>
+                <a href="/about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                    <i class="fa fa-user w3-xxlarge"></i>
+                    <p>ABOUT</p>
+                </a>
+                <a href="/photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                    <i class="fa fa-eye w3-xxlarge"></i>
+                    <p>PHOTOS</p>
+                </a>
+                <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                    <i class="fa fa-envelope w3-xxlarge"></i>
+                    <p>CONTACT</p>
+                </a>
+                <a href="/menu" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                    <i class="fa fa-building w3-xxlarge"></i>
+                    <p>MENU</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="/" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+            <a href="/about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+            <a href="/photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+            <a href="/contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+            <a href="/menu" class="w3-bar-item w3-button" style="width:25% !important">MENU</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+            <img src="/img/contact.png" alt="bake" class="w3-image" width="95%" height="95%">
+        </header>
+
+
+        <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+            <h2 class="w3-text-light-grey">Contact US</h2>
+            <hr style="width:200px" class="w3-opacity">
+
+            <div class="w3-section">
+                <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Campulung Muscel, Arges</p>
+                <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +40 753 673 826</p>
+                <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: daria.broscoteanu@gmail.com</p>
+            </div><br>
+            <p>Let's get in touch. Add a review:</p>
+
+            <form action="/rating" method="post" target="_blank" name="form">
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-padding-16" type="range" min="0" max="5" placeholder="Rating" required name="Rating"></p>
+                <script>
+
+                    function validatedate(inputText) {
+                        var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+                        // Match the date format through regular expression
+                        if (inputText.value.match(dateformat)) {
+                            document.form.Date.focus();
+                            //Test which seperator is used '/' or '-'
+                            var opera1 = inputText.value.split('/');
+                            var opera2 = inputText.value.split('-');
+                            lopera1 = opera1.length;
+                            lopera2 = opera2.length;
+                            // Extract the string into month, date and year
+                            if (lopera1 > 1) {
+                                var pdate = inputText.value.split('/');
+                            }
+                            else if (lopera2 > 1) {
+                                var pdate = inputText.value.split('-');
+                            }
+                            var dd = parseInt(pdate[0]);
+                            var mm = parseInt(pdate[1]);
+                            var yy = parseInt(pdate[2]);
+                            // Create list of days of a month [assume there is no leap year by default]
+                            var ListofDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                            if (mm == 1 || mm > 2) {
+                                if (dd > ListofDays[mm - 1]) {
+                                    alert('Invalid date format!');
+                                    return false;
+                                }
+                            }
+                            if (mm == 2) {
+                                var lyear = false;
+                                if ((!(yy % 4) && yy % 100) || !(yy % 400)) {
+                                    lyear = true;
+                                }
+                                if ((lyear == false) && (dd >= 29)) {
+                                    alert('Invalid date format!');
+                                    return false;
+                                }
+                                if ((lyear == true) && (dd > 29)) {
+                                    alert('Invalid date format!');
+                                    return false;
+                                }
+                            }
+                        }
+                        else {
+                            alert("Invalid date format!");
+                            document.form.Date.focus();
+                            return false;
+                        }
+                    }
+
+                </script>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Date" required name="Date" onclick="validatedate(document.form.Date)"></p>
+                <p>
+                    <script>
+
+                        function func1(event) {
+                            if (typeof (Storage) !== "undefined") {
+                                if (localStorage.clickcount) {
+                                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                                } else {
+                                    localStorage.clickcount = 1;
+                                }
+                                document.getElementById("result").innerHTML = "Review number: " + localStorage.clickcount;
+                            } else {
+                                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                            }
+                            alert("Submitted");
+                        }
+                        function setRandomColors() {
+                            let colors = ["red", "blue", "green"];
+                            for (let el of Array.from(document.getElementsByClassName("random-color"))) {
+                                const randomIndex = Math.floor(Math.random() * colors.length);
+                                el.style.setProperty("color", colors[randomIndex], "important")
+                                colors.splice(randomIndex, 1);
+                            }
+                        }
+
+                    </script>
+
+                    <button class="w3-button w3-light-grey w3-padding-large random-color" type="submit" onclick="setTimeout(setRandomColors, 1000);">
+
+                        <i class="fa fa-paper-plane "></i>   <div onclick="func1(event)">SEND MESSAGE</div>
+                    </button>
+
+                    <div id="result"></div>
+                </p>
+            </form>
+            <p id="recom">
+                <h1>Our Recomandations:</h1>
+
+                <div class="grid-container">
+                    <div class="grid-item">CARAMEL APPLE CHEESECAKE </div>
+                    <div class="grid-item">SALTED CARAMEL CHEESECAKE</div>
+                    <div class="grid-item">CHOCOLATE CROISSANTE</div>
+                    <div class="grid-item">CAMPAGNOLO</div>
+                    <div class="grid-item">OLIVE FOCACCIA</div>
+                    <div class="grid-item">ICED BRIOCHE CINNAMON ROLLS</div>
+                    <div class="grid-item">FRESH STRAWBERRY SHORTCAKE</div>
+                    <div class="grid-item">TIRAMISU</div>
+                    <div class="grid-item">GOLDENDALE WHOLE WHEAT</div>
+                </div>
+
+            </p>
+
+
+            <br /> <br />
+
+            <div class="order">
+                <p>ORDER NOW!</p>
+            </div>
+            <!-- Footer -->
+            <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+
+                <!-- End footer -->
+            </footer>
+
+            <!-- END PAGE CONTENT -->
+        </div>
+
+</body>
+</html>
